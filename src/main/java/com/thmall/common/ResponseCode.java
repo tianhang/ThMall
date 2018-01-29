@@ -1,7 +1,7 @@
 package com.thmall.common;
 
 /**
- * Created by geely
+ * Created by tianhang
  */
 public enum ResponseCode {
 
