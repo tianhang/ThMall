@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+
 /**
  * Created by tianhang on 28/1/18.
  */
@@ -17,6 +18,7 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private UserMapper userMapper;
 
+
     @Override
     public ServerResponse<User> login(String username, String password) {
         int resultCount = userMapper.checkUsername(username);
@@ -24,6 +26,7 @@ public class UserServiceImpl implements IUserService {
             return ServerResponse.createByErrorMessage("User does not exist");
         }
         //todo  MD5
+
 
         User user = userMapper.selectLogin(username,password);
         if(user == null){
